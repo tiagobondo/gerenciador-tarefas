@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Strait;
+  src: url('./fonts/Strait-Regular.ttf');
+}
+
+.header{
+  background-color: #008cff;
+  height: 90px;
+  font-family: Strait;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px #3a3a3a8c;
+  position: sticky;
+  top: 0;
+}
+
+.title-header{
+  padding: 50px;
+  color: #fff;
+}
+
+.container-nav{
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 5%;
+}
+
+.link-nav{
+  padding: 10px;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.link-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  transition: .5s;
+}
+
+.link-nav:hover{
+  border-left: 2px solid #000000a1;
+}
+
+.link-nav a:hover{
+  color: #000000a1;
+}
+
+.link-nav a:active{
+  color: #fff;
+}
+
+.sub-container{
+  display: none;
+  background-color: #4e4e4ef8;
+  position: absolute;
+  top: 100%;
+  padding: 10px;
+  list-style: none;
+  width: 130px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00000093;
+}
+
+#link-user:hover .sub-container{
+  display: block;
+}
+
+.link-sub-container{
+  outline: none;
+  border: none;
+  display: block;
+  padding: 5px;
+}
+
+#btn-logout{
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  background-color: #0010;
+  cursor: pointer;
+  transition: .5s;
+  color: #fff;
+}
+
+#btn-logout:hover{
+  color: #000000a1;
+}

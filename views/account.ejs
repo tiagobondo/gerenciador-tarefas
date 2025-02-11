@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/icones/css/all.css'/>
+  </head>
+  <body>
+    <form action="/account" class="form-login" method="post">
+      <h1 class="title-form-login">Criar conta!</h1>
+
+      <p class="msg-error" id="msgError"><%= message %></p>
+     
+      <div class="container">
+        <label for="" class="label-input">Usuário</label>
+        <div class="container-input">
+        <i class="fa fa-user"></i> <input type="text" placeholder="Digite seu nome de usuário" class="input" name="userName" required>
+        </div>
+      </div>
+
+     <div class="container">
+      <label for="" class="label-input">Senha</label>
+     <div class="container-input">
+      <i class="fa fa-lock"></i> <input type="password" placeholder="Digite sua senha" class="input" name="password" id="txtpassword" required>
+     </div>
+     </div>
+
+     <div class="container">
+      <label for="" class="label-input">Reconfirmar a senha</label>
+     <div class="container-input">
+      <i class="fa fa-lock"></i> <input type="password" placeholder="Digite a reconfirmação da senha" class="input" name="passwordRec" id="txtRecpassword" required>
+     </div>
+     </div>
+
+     <div class="container-link">
+      <p class="paragraphy">Já tenho uma conta</p><a href="/" class="link">Entrar</a>
+     </div>
+
+      <div class="container-footer">
+        <button type="submit" class="btn-login">Criar</button>
+      </div>
+    </form>
+
+    <script src="/javascripts/custom.js"></script>
+  </body>
+</html>

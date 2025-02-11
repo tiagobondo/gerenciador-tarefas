@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title><%= title %></title>
+  <%- include('partials/header.ejs')%>
+</head>
+<body id="bodyViswork">
+  <% for(data of data) {%>
+    <article class="content-form">
+      <h3><%= data.workType %></h3>
+      <h3><%= data.dateRemeber %></h3>
+      <h3><%= data.text %></h3>
+      <!--/users/visworks/edit/<%= data.id %>-->
+      <div class="container-moreInf">
+        <a href="#" class="link-more" id="icon-edit" 
+        onclick="visModalEdit(data={
+          id:'<%= data.id %>',
+          text:'<%= data.text%>'  })">
+        <i class="fa fa-edit"></i>
+      </a>
+        <a onclick="return confirm('Tens a certeza? ')" href="/users/visworks/delete/<%= data.id %>" class="link-more" id="icon-del"><i class="fa fa-trash"></i></a>
+        </div>
+    </article>
+    
+    <%}%>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+    
+        <form action="" method="post" id="formEdit">
+        <label for="itext" class="label-form-work">Observação</label> <br>
+        <textarea name="text" id="itext" rows="6" cols="1"  class="input-form-work" placeholder="Detalhe mais sobre as tarefas que irás executar"></textarea> <br>
+    
+        <button type="submit" class="btn-cad">Editar</button>
+        <button type="reset" class="btn-cad" id="btn-resert">Fechar</button>
+        </form>
+      </div>
+    </div>
+  
+    <script src="/javascripts/custom.js"></script>
+</body>
+</html>

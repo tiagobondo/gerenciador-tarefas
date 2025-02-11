@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <%- include('partials/header')%>
+</head>
+<body>
+
+  <main class="main-infor">
+
+    <article class="container-article">
+      <i class="fa fa-book"></i>
+      <h2 class="title-article"><%= countWorks%></h2>
+    </article>
+
+    <article class="container-article" id="container-article-users">
+      <i class="fa fa-users"></i>
+      <h2 class="title-article"><%= countUsers%></h2>
+    </article>
+
+  </main>
+   <h3 class="text-infor">Suas tarefas e usuários do sistema </h3>
+</body>
+</html>

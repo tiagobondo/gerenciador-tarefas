@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/icones/css/all.css'/>
+  </head>
+  <body>
+    <form action="/login" class="form-login" method="post">
+      <h1 class="title-form-login">Seja Bem-vindo!</h1> 
+
+      <p class="msg-error" id="msgError"><%= message %></p>
+     
+      <div class="container">
+        <label for="" class="label-input">Usuário</label>
+        <div class="container-input">
+        <i class="fa fa-user"></i> <input type="text" placeholder="Digite seu nome de usuário" class="input" name="userName">
+        </div>
+      </div>
+
+     <div class="container">
+      <label for="" class="label-input">Senha</label>
+     <div class="container-input">
+      <i class="fa fa-lock"></i> <input type="password" placeholder="Digite sua senha" class="input" name="password">
+     </div>
+     </div>
+
+     <div class="container-link">
+      <p class="paragraphy">Esqueci me da senha</p><a href="#" class="link">Recuperar</a><p class="paragraphy">/ou não tenho uma conta</p><a href="/creat" class="link">Criar</a>
+     </div>
+
+      <div class="container-footer">
+        <button type="submit" class="btn-login">Entrar</button>
+      </div>
+    </form>
+
+    <script src="/javascripts/custom.js"></script>
+  </body>
+</html>

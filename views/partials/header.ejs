@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/partials.css">
+  <link rel='stylesheet' href='/stylesheets/icones/css/all.css'/>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>  
+  <header class="header">
+    <h2 class="title-header">Gerencie suas tarefas</h2>
+
+    <ul class="container-nav">
+      <li class="link-nav"> <a href="/users/"><i class="fa fa-line-chart"></i> Estatisticas</a> </li>
+      <li class="link-nav"> <a href="/users/visworks"><i class="fa fa-book"></i> Minhas tarefas</a> </li>
+      <li class="link-nav"> <a href="/users/registerwork"><i class="fa fa-plus"></i> Registar tarefa</a> </li>
+
+      <li class="link-nav" id="link-user"> 
+        <a href="#"><i class="fa fa-user"></i> Usuário</a>
+        <ul class="sub-container">
+          <li>
+            <form action="/users/logout" method="post">
+              <button type="submit" class="link-sub-container" id="btn-logout">Sair</button>
+            </form>
+          </li>
+        </ul>
+       </li>
+    </ul>
+  </header>
+
