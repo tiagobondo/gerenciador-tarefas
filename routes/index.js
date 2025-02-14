@@ -30,8 +30,8 @@ router.post('/account', async (req, res) => {
 
     if (password !== passwordRec) {
       return res
-      .status(401)
-      .render('account', { title: 'Criar conta', message: 'A reconfirmação da senha deve ser igual a senha!' })
+        .status(401)
+        .render('account', { title: 'Criar conta', message: 'A reconfirmação da senha deve ser igual a senha!' })
     } else {
       const dataDb = await modelUser.findOne({ userName })
 
@@ -84,7 +84,7 @@ router.post('/login', async (req, res) => {
     } else {
       const verifyPassword = bcrypt.compareSync(password, dataDb.password)
       if (verifyPassword === true) {
-        const token = jwt.sign({ id: dataDb.id }, process.env.SECRET)
+        const token = jwt.sign({ id: dataDb.id, userName: dataDb.userName }, process.env.SECRET)
 
         res
           .cookie('token', token, {

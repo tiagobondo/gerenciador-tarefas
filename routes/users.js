@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     const countUsers = await modelUser.find().countDocuments()
     const countWorks = await modelWorks.find().countDocuments()
     res
-      .render('dashboard', { title: 'Dashboard', countUsers: countUsers, countWorks: countWorks })
+      .render('dashboard', { title: 'Dashboard', countUsers: countUsers, countWorks: countWorks, userName:req.user.userName })
   } catch (error) {
     console.log(error)
   }
@@ -25,7 +25,7 @@ router.post('/logout', (req, res) => {
 
 router.get('/registerwork', (req, res) => {
   return res
-    .render('registerwork', { title: 'Registar tarefas', message: '' })
+    .render('registerwork', { title: 'Registar tarefas', message: '', userName:req.user.userName })
 })
 
 router.post('/registerwork', async (req, res) => {
@@ -56,7 +56,7 @@ router.get('/visworks', async (req, res) => {
   try {
     const data = await modelWorks.find()
     res
-      .render('visworks', { title: 'Tarefas', message: '', data: data })
+      .render('visworks', { title: 'Tarefas', message: '', data: data, userName:req.user.userName })
   } catch (error) {
     console.log(error)
   }
